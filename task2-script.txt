@@ -1,0 +1,29 @@
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\rectangle --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\rectangle-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\circle --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\circle-style 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\triangle --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\triangle-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\ellipse --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\ellipse-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\cir-elli --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\cir-elli-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\cir-elli-tri --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\cir-elli-tri-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\cir-tri --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\cir-tri-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\elli-tri --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\elli-tri-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\rect-cir --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\rect-cir-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\rect-cir-elli --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\rect-cir-elli-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\rect-cir-elli --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\rect-cir-elli-tri-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\rect-cir-elli --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\rect-cir-tri-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\rect-cir-elli --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\rect-elli-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\rect-cir-elli --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\rect-elli-tri-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape_task2\rect-cir-elli --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape_task2\style\rect-tri-style --num-styles 1 --alpha 0.3 --content-size 0 --style-size 256

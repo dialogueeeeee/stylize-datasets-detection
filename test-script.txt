@@ -1,0 +1,17 @@
+python stylize.py --content-dir F:\dataset\oiltank --style-dir F:\dataset\shape_task2\rect-cir-elli-tri --output-dir F:\dataset\oiltank_style --num-styles 1 --alpha 1 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\dataset\aircraft --style-dir F:\dataset\shape_task2\rect-cir-elli-tri --output-dir F:\dataset\aircraft_style --num-styles 1 --alpha 1 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\dataset\Homework3-PACS-master\PACS\photo\dog --style-dir F:\dataset\shape_task2\rect-cir-elli-tri --output-dir F:\dataset\test_style --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\dataset\Homework3-PACS-master\PACS\photo\dog --style-dir F:\dataset\pure_stylized\rectangle --output-dir F:\dataset\test_style --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\dataset\oiltank --style-dir F:\dataset\pure_stylized\rectangle --output-dir F:\dataset\oiltank_style --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\dataset\oiltank --style-dir F:\dataset\pure_stylized\circle --output-dir F:\dataset\oiltank_style --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\dataset\oiltank --style-dir F:\dataset\pure_stylized\4-shape --output-dir F:\dataset\oiltank_style --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\dataset\aircraft --style-dir F:\dataset\pure_stylized\4-shape --output-dir F:\dataset\aircraft_style --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\dataset\Homework3-PACS-master\PACS\photo\dog --style-dir F:\dataset\pure_stylized\4-shape --output-dir F:\dataset\test_style --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256

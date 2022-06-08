@@ -1,0 +1,75 @@
+官方示例
+python3 stylize.py --content-dir '/home/username/stylize-datasets/images/' --style-dir '/home/username/stylize-datasets/train/' --num-styles 10 --content_size 0 --style_size 256
+
+本地（形状数据集生成）
+（Linux）
+python3 stylize.py --content-dir F:/graduation_prj/shape-dataset/rectangle/ --style-dir F:/graduation_prj/texture-vs-shape_ArticalRec/train/ --num-styles 10 --content-size 0 --style-size 256
+（Windows）
+python stylize.py --content-dir F:\\graduation_prj\\shape-dataset\\rectangle --style-dir F:\\graduation_prj\\texture-vs-shape_ArticalRec\\train --num-styles 2 --content-size 0 --style-size 256
+
+F:\pyprj_testfile\shape\rectangle
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\rectangle --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_rectangle --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\circle --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_circle --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\triangle --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_triangle --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\ellipse --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_ellipse --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\star --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_star --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\diamond --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_diamond --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\hexagon --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_hexagon --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\octagon --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_octagon --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\pentagon --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_pentagon --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\trapezoid --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\style_trapezoid --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\rectangle_val --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\rectangle_val --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\circle_val --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\circle_val --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\triangle_val --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\triangle_val --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\pyprj_testfile\shape\ellipse_val --style-dir F:\graduation_prj\texture-vs-shape_ArticalRec\train --output-dir F:\pyprj_testfile\shape\ellipse_val --num-styles 10 --alpha 0.3 --content-size 0 --style-size 256
+
+参数说明
+--content-dir <CONTENT> 内容图像数据集的顶级目录 (mandatory)
+--style-dir <STLYE> 内容风格数据集的顶级目录 (mandatory)
+--output-dir <OUTPUT> 将存储风格化数据集的目录 (optional, default: output/)
+--num-styles <N> 为每个内容图像创建的风格化数量 (optional, default: 1)
+--alpha <A> 控制风格化强度的权重，应该在0到1之间 (optional, default: 1)
+--extensions <EX0> <EX1> ... 扫描样式和内容目录的图像扩展列表 (optional, default: png, jpeg, jpg). Note: this is case sensitive, --extensions jpg will not scan for files ending on .JPG. Image types must be compatible with PIL's Image.open() (Documentation) 这是区分大小写的，—— extensions jpg将不会扫描以 .jpg 结尾的文件。图像类型必须与PIL的Image.open()兼容
+--content-size <N> 内容图像的最小尺寸，导致内容图像的短边缩放为N (optional, default: 0). Set this to 0 to keep the original image dimensions.
+--style-size <N> 样式图像的最小尺寸，导致样式图像的短边缩放为N (optional, default: 512). Set this to 0 to keep the original image dimensions (for large style images, this will result in high (GPU) memory consumption).
+--crop <N> 应用于内容图像的中心裁剪的大小，以创建一个正方形的图像 (optional, default 0). Setting this to 0 will disable the cropping.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Q1:
+F:\graduation_prj\stylize-datasets-master>python stylize.py --content-dir 'F:\graduation_prj\shape-dataset\rectangle' --style-dir 'F:\graduation_prj\texture-vs-shape_ArticalRec\train' --num-styles 10 --content_size 0 --style_size 256
+usage: stylize.py [-h] [--content-dir CONTENT_DIR] [--style-dir STYLE_DIR] [--output-dir OUTPUT_DIR]
+                  [--num-styles NUM_STYLES] [--alpha ALPHA] [--extensions EXTENSIONS [EXTENSIONS ...]]
+                  [--content-size CONTENT_SIZE] [--style-size STYLE_SIZE] [--crop CROP]
+stylize.py: error: unrecognized arguments: --content_size 0 --style_size 256
+
+Q2:
+F:\graduation_prj\stylize-datasets-master>python stylize.py --content-dir 'F:\graduation_prj\shape-dataset\rectangle\' --style-dir 'F:\graduation_prj\texture-vs-shape_ArticalRec\train\' --num-styles 10 --content-size 0 --style-size 256
+Traceback (most recent call last):
+  File "stylize.py", line 165, in <module>
+    main()
+  File "stylize.py", line 65, in main
+    style_dir = style_dir.resolve()
+  File "E:\anaconda_file\lib\pathlib.py", line 1180, in resolve
+    s = self._flavour.resolve(self, strict=strict)
+  File "E:\anaconda_file\lib\pathlib.py", line 205, in resolve
+    s = self._ext_to_normal(_getfinalpathname(s))
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: "'F:\\graduation_prj\\texture-vs-shape_ArticalRec\\train\\'"
