@@ -149,6 +149,8 @@ def main():
                     output_name = out_dir.joinpath(out_filename)
 
                     ## xml label generation
+                    out_label_filename = content_name + '-stylized-' + style_name + '.xml'
+                    # output_label_name = output_label_name
 
                     save_image(output, output_name, padding=0) #default image padding is 2.
                     style_img.close()
