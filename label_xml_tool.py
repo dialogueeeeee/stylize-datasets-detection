@@ -7,12 +7,14 @@
 import os
 from xml.dom.minidom import parse
 
-def update_filename(image_path, image_name):
-    output_image    = os.path.join(image_path, image_name)
-    domTree         = parse(original_file)
+def update_filename(xml_file, image_name, image_file):
+    domTree         = parse(xml_file)
     rootNode        = domTree.documentElement
 
-    filename    = rootNode.getElementsByTagName("filename")
-    path        = rootNode.getElementsByTagName("path")
+    filename    = rootNode.getElementsByTagName("filename")[0]
+    path        = rootNode.getElementsByTagName("path")[0]
     filename.childNodes[0].data = image_name
-    path.childNodes[0].data     = output_image
+    path.childNodes[0].data     = image_file
+
+    with open(xml_file, 'w') as f:
+        domTree.writexml(f, addindent=' ', encoding='utf-8')

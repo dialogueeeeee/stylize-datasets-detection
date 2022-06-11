@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import shutil
+import os
 import argparse
 from function import adaptive_instance_normalization
 import net
@@ -10,6 +12,7 @@ import torch.nn as nn
 import torchvision.transforms
 from torchvision.utils import save_image
 from tqdm import tqdm
+from label_xml_tool import update_filename
 
 parser = argparse.ArgumentParser(description='This script applies the AdaIN style transfer method to arbitrary datasets.')
 parser.add_argument('--content-dir', type=str,
@@ -143,14 +146,22 @@ def main():
                     if not out_dir.is_dir():
                         out_dir.mkdir(parents=True)
 
-                    content_name = content_path.stem
-                    style_name = style_path.stem
-                    out_filename = content_name + '-stylized-' + style_name + content_path.suffix
-                    output_name = out_dir.joinpath(out_filename)
+                    content_name    = content_path.stem
+                    style_name      = style_path.stem
+                    out_filename    = content_name + '-stylized-' + style_name + content_path.suffix
+                    output_name     = out_dir.joinpath(out_filename)
 
                     ## xml label generation
-                    out_label_filename = content_name + '-stylized-' + style_name + '.xml'
-                    # output_label_name = output_label_name
+                    src_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\Annotations'
+                    out_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\stylized_Annotations'
+
+                    if src_label_path:
+                        src_label_filename  = content_name + '.xml'
+                        src_label_file      = os.path.join(src_label_path, src_label_filename)
+                        out_label_filename  = content_name + '-stylized-' + style_name + '.xml'
+                        out_label_file      = os.path.join(out_label_path, out_label_filename)
+                        shutil.copyfile(src_label_file, out_label_file)
+                        update_filename(out_label_file, out_filename, output_name)
 
                     save_image(output, output_name, padding=0) #default image padding is 2.
                     style_img.close()

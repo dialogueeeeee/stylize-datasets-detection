@@ -15,3 +15,5 @@ python stylize.py --content-dir F:\dataset\oiltank --style-dir F:\dataset\pure_s
 python stylize.py --content-dir F:\dataset\aircraft --style-dir F:\dataset\pure_stylized\4-shape --output-dir F:\dataset\aircraft_style --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256
 
 python stylize.py --content-dir F:\dataset\Homework3-PACS-master\PACS\photo\dog --style-dir F:\dataset\pure_stylized\4-shape --output-dir F:\dataset\test_style --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256
+
+python stylize.py --content-dir F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\JPEGImages --style-dir F:\dataset\oiltank --output-dir F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\JPEGImages_stylized_oiltank --num-styles 1 --alpha 0.5 --content-size 0 --style-size 256
