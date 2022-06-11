@@ -16,4 +16,3 @@ def update_filename(image_path, image_name):
     path        = rootNode.getElementsByTagName("path")
     filename.childNodes[0].data = image_name
     path.childNodes[0].data     = output_image
-    
