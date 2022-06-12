@@ -1,6 +1,6 @@
 # stylize-datasets-detection
 - A script that applies the AdaIN style transfer method to VOC format object detection datasets.
-- 本项目是使用 AdaIN 对 VOC 格式的目标检测数据集进行样式迁移的脚本，可以同时生成风格迁移后的图像和对应的标签文件。
+- 本项目是使用 AdaIN 对 VOC 格式的目标检测数据集进行**风格迁移**的脚本，可以同时生成风格迁移后的图像和对应的标签文件。
 
 ## Introduction
 - 本项目在 [stylize-datasets](https://github.com/bethgelab/stylize-datasets) 基础上进行改进，在原项目的基础上**新增了标签文件的生成**；
