@@ -40,10 +40,10 @@ parser.add_argument('--crop', type=int, default=0,
                     after resizing in order to create a squared image (default: 0)')
 
 # xml label options
-# parser.add_argument('--xml-label-path', type=int, default='',
-#                     help='path of original xml')
-# parser.add_argument('--style-xml-save-path', type=int, default='',
-#                     help='path of original xml')
+parser.add_argument('--src-label-path', type=str, default='',
+                    help='path of source xml')
+parser.add_argument('--out-label-path', type=str, default='',
+                    help='path of dst xml')
 
 # random.seed(131213)
 
@@ -75,6 +75,18 @@ def main():
     output_dir = Path(args.output_dir)
     output_dir = output_dir.resolve()
     assert style_dir.is_dir(), 'Style directory not found'
+
+    # set xml label directories
+    if args.src_label_path:
+        src_label_path = Path(args.src_label_path)
+        src_label_path = src_label_path.resolve()
+        assert src_label_path.is_dir()
+        if args.out_label_path:
+            out_label_path = Path(args.out_label_path)
+            out_label_path = out_label_path.resolve()
+            assert out_label_path.is_dir()
+        else:
+            out_label_path = src_label_path
 
     # collect content files
     extensions = args.extensions
@@ -152,8 +164,8 @@ def main():
                     output_name     = out_dir.joinpath(out_filename)
 
                     ## xml label generation
-                    src_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\Annotations'
-                    out_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\stylized_Annotations'
+                    # src_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\Annotations'
+                    # out_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\stylized_Annotations'
 
                     if src_label_path:
                         src_label_filename  = content_name + '.xml'
