@@ -24,17 +24,10 @@ def csv_stylized_item_add(stylized_filename, stylized_imfor, csv_path):
     for i in range(len(stylized_imfor)):
         [_name, x_min, y_min, x_max, y_max, label] = stylized_imfor[i]
         stylized_imfor_test = stylized_filename + "," + str(x_min) + "," + str(y_min) + "," + str(x_max) + "," + str(y_max) + "," + label
-        print(stylized_imfor_test)
+        # print(stylized_imfor_test)
         csv_file.write(
             stylized_filename + "," + str(x_min) + "," + str(y_min) + "," + str(x_max) + "," + str(y_max) + "," + label + "\n")
 
     csv_file.close()
-
-content_name  = '5.jpg'
-stylized_name = '5-stylized-03.jpg'
-csv_path = 'csv_labels.csv'
-
-stylized_imfor = csv_item_search(csv_path, content_name)
-csv_stylized_item_add(stylized_name, stylized_imfor, csv_path)
 
 

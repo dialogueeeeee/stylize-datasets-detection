@@ -40,11 +40,17 @@ parser.add_argument('--crop', type=int, default=0,
                     help='If set to anything else than 0, center crop of this size will be applied to the content image \
                     after resizing in order to create a squared image (default: 0)')
 
-# xml label options
+## xml label options
 # parser.add_argument('--src-label-path', type=str, default='',
 #                     help='path of source xml')
 # parser.add_argument('--out-label-path', type=str, default='',
 #                     help='path of dst xml')
+
+## csv label option
+# parser.add_argument('--src-csv-path', type=str, default='',
+#                     help='path of source csv')
+# parser.add_argument('--out-csv-path', type=str, default='',
+#                     help='path of dst csv')
 
 # random.seed(131213)
 
@@ -164,6 +170,10 @@ def main():
                     out_filename    = content_name + '-stylized-' + style_name + content_path.suffix
                     output_name     = out_dir.joinpath(out_filename)
 
+                    # ************************************************* #
+                    #                  label generation                 #
+                    # ************************************************* #
+
                     ## xml label generation
                     # src_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\Annotations'
                     # out_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\stylized_Annotations'
@@ -177,7 +187,12 @@ def main():
                     #     update_filename(out_label_file, out_filename, output_name)
 
                     ## csv label generation
+                    src_csv_path = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\csv_Annotations\csv_labels.csv'
+                    out_csv_path = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\csv_Annotations\csv_labels_style.csv'
+                    stylized_imfor = csv_item_search(src_csv_path, content_name + content_path.suffix)
+                    csv_stylized_item_add(out_filename, stylized_imfor, out_csv_path)
 
+                    # ************************************************* #
 
                     save_image(output, output_name, padding=0) #default image padding is 2.
                     style_img.close()
