@@ -13,6 +13,7 @@ import torchvision.transforms
 from torchvision.utils import save_image
 from tqdm import tqdm
 from label_xml_tool import update_filename
+from label_csv_tool import csv_item_search, csv_stylized_item_add
 
 parser = argparse.ArgumentParser(description='This script applies the AdaIN style transfer method to arbitrary datasets.')
 parser.add_argument('--content-dir', type=str,
@@ -164,16 +165,19 @@ def main():
                     output_name     = out_dir.joinpath(out_filename)
 
                     ## xml label generation
-                    src_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\Annotations'
-                    out_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\stylized_Annotations'
+                    # src_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\Annotations'
+                    # out_label_path      = 'F:\graduation_prj\shapedataset-detection\multi-shape-dataset-test\stylized_Annotations'
 
-                    if src_label_path:
-                        src_label_filename  = content_name + '.xml'
-                        src_label_file      = os.path.join(src_label_path, src_label_filename)
-                        out_label_filename  = content_name + '-stylized-' + style_name + '.xml'
-                        out_label_file      = os.path.join(out_label_path, out_label_filename)
-                        shutil.copyfile(src_label_file, out_label_file)
-                        update_filename(out_label_file, out_filename, output_name)
+                    # if src_label_path:
+                    #     src_label_filename  = content_name + '.xml'
+                    #     src_label_file      = os.path.join(src_label_path, src_label_filename)
+                    #     out_label_filename  = content_name + '-stylized-' + style_name + '.xml'
+                    #     out_label_file      = os.path.join(out_label_path, out_label_filename)
+                    #     shutil.copyfile(src_label_file, out_label_file)
+                    #     update_filename(out_label_file, out_filename, output_name)
+
+                    ## csv label generation
+
 
                     save_image(output, output_name, padding=0) #default image padding is 2.
                     style_img.close()
